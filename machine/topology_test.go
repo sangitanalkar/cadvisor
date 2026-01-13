@@ -492,6 +492,13 @@ func TestTopologyOnSystemZ(t *testing.T) {
 		assert.Equal(t, 2, len(topology))
 		assert.Equal(t, 4, numCores)
 
+		sort.Slice(topology, func(i, j int) bool {
+		if len(topology[i].Cores) == 0 || len(topology[j].Cores) == 0 {
+				return i < j
+		}
+		return topology[i].Cores[0].SocketID < topology[j].Cores[0].SocketID
+		})
+
 		topologyJSON1, err := json.Marshal(topology[0])
 		assert.Nil(t, err)
 		topologyJSON2, err := json.Marshal(topology[1])
