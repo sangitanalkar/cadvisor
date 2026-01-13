@@ -497,7 +497,7 @@ func TestTopologyOnSystemZ(t *testing.T) {
 			return i < j
 		}
 		return topology[i].Cores[0].SocketID < topology[j].Cores[0].SocketID
-		}
+		})
 		
 		topologyJSON1, err := json.Marshal(topology[0])
 		assert.Nil(t, err)
