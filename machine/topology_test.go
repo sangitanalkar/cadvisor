@@ -494,7 +494,7 @@ func TestTopologyOnSystemZ(t *testing.T) {
 
 		sort.Slice(topology, func(i, j int) bool {
 			if len(topology[i].Cores) == 0 || len(topology[j].Cores) == 0 {
-					return i < j
+				return i < j
 			}
 			return topology[i].Cores[0].SocketID < topology[j].Cores[0].SocketID
 		})
