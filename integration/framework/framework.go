@@ -444,13 +444,13 @@ type crioContainerConfig struct {
 
 func (a *crioActions) RunPause() string {
 	return a.Run(CrioRunArgs{
-		Image: "registry.k8s.io/pause:3.9",
+		Image: "registry.k8s.io/pause:3.10",
 	})
 }
 
 func (a *crioActions) RunBusybox(cmd ...string) string {
 	return a.Run(CrioRunArgs{
-		Image: "registry.k8s.io/busybox:1.27",
+		Image: "registry.k8s.io/busybox:1.36",
 	}, cmd...)
 }
 
