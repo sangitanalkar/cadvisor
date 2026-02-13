@@ -14,5 +14,5 @@
 
 export GO_FLAGS="-tags=libipmctl,cgo -race"
 export PACKAGES="sudo libipmctl5"
-export BUILD_PACKAGES="libipmctl5 libipmctl-dev"
+export BUILD_PACKAGES="libipmctl-common"
 export CADVISOR_ARGS="-perf_events_config=perf/testing/perf-non-hardware.json"
